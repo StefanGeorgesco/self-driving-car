@@ -9,8 +9,13 @@ The game is in map.py file.
 
 ### To run the game :
 Activate environment :
+
 ``` conda activate artificialintelligenceaz ```
+
 Move to project root directory, then type :
+
 ``` python map.py ```
+
 To deactivate the environment :
+
 ``` conda deactivate ```
