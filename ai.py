@@ -30,7 +30,7 @@ class Network(nn.Module):
 
 # Implementing Experience Replay
 
-class ReplayMemory(object):
+class ReplayMemory:
     
     def __init__(self, capacity):
         self.capacity = capacity
@@ -47,7 +47,7 @@ class ReplayMemory(object):
 
 # Implementing Deep Q Learning
 
-class Dqn():
+class Dqn:
     
     def __init__(self, input_size, nb_action, gamma):
         self.gamma = gamma
@@ -60,7 +60,7 @@ class Dqn():
         self.last_reward = 0
     
     def select_action(self, state):
-        probs = F.softmax(self.model(Variable(state, volatile = True)) * 0, dim=1) # T=100
+        probs = F.softmax(self.model(Variable(state, volatile = True)) * 7, dim=1) # T=7
         action = probs.multinomial(num_samples=1)
         return action.data[0,0]
     
